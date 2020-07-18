@@ -1,0 +1,35 @@
+{
+  "name": "modulo-2-evaluacion-final-elemarmar",
+  "version": "1.0.0",
+  "description": "Tecnologías que voy a utilizar:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adalab/modulo-2-evaluacion-final-elemarmar.git"
+  },
+  "author": "Elena MM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adalab/modulo-2-evaluacion-final-elemarmar/issues"
+  },
+  "homepage": "https://github.com/Adalab/modulo-2-evaluacion-final-elemarmar#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "uglify-es": "^3.3.9"
+  }
+}

@@ -1,0 +1,18 @@
+@import 'core/reset';
+@import 'core/variables';
+@import 'core/mixins';
+@import 'components/loading';
+@import 'components/search-bar';
+@import 'components/genres';
+@import 'components/profile';
+@import 'components/favorite-watched';
+
+@import 'layout/header';
+
+@import 'pages/welcome-page';
+@import 'pages/selection-area';
+
+html,
+body {
+  font-family: $Font;
+}
