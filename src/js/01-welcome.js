@@ -97,8 +97,10 @@ const randomString = () => {
 
 // get today's date
 const whatDayIsToday = () => {
-  let today = new Date().toLocaleString().split(',')[0];
-  return today;
+  let year = new Date().getFullYear();
+  let month = new Date().getMonth();
+  let day = new Date().getDay();
+  return year + month + day;
 };
 
 // set last login
@@ -143,7 +145,7 @@ const getRequestInfoHtmlCode = (url) => {
   htmlCode += `   <div class="input-highlight"></div>`;
   htmlCode += `   <div class="request__info--avatar">`;
   htmlCode += `       <div class="avatar__container">`;
-  htmlCode += `           <img src="${url}" alt="avatar image" class="avatar request">`;
+  htmlCode += `           <img src="${url}" class="avatar request">`;
   htmlCode += `      </div>`;
   htmlCode += `      <p class="avatar-description">`;
   htmlCode += `           <span class="js-not-happy not-happy">Not happy ?</span>`;
@@ -170,7 +172,7 @@ const getWelcomeHtmlCode = () => {
   htmlCode += `<div class="welcome__container">`;
   htmlCode += `     <h1 class="welcome-title">Hello, <span class="name">${user.name}</span></h1>`;
   htmlCode += `     <div class="avatar__container">`;
-  htmlCode += `           <img src="${user.avatar}" alt="" class="avatar welcome fade-in">`;
+  htmlCode += `           <img src="${user.avatar}" class="avatar welcome fade-in">`;
   htmlCode += `     </div>`;
   htmlCode += `     <p class="quote fade-in js-quote"></p>`;
   htmlCode += `</div>`;

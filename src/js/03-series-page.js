@@ -71,7 +71,7 @@ const startSeriesApp = () => {
 // generates a random selection of series
 
 const generateRandomSelection = (items) => {
-  for (let i = 0; i < items; i++) {
+  while (idSelection.length < items) {
     const number = randomNumber(4916);
     // make sure ids aren't repeated
     if (idSelection.indexOf(number) === -1) {
