@@ -687,7 +687,7 @@ a {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.3); }
     .avatar-description .not-happy:hover ~ .refresh-avatar {
-      transform: rotate(360deg); }
+      color: #da2a8b; }
 
 .avatar-description .happy {
   margin-right: 30px;
@@ -702,9 +702,18 @@ a {
   font-size: 20px;
   transition: transform 5s ease;
   cursor: pointer;
-  margin: 0 10px; }
+  margin: 0 10px;
+  transition: color .7s ease; }
   .avatar-description .refresh-avatar:hover {
-    transform: rotate(360deg); }
+    color: #da2a8b; }
+  .avatar-description .refresh-avatar.animate {
+    animation: rotate .5s ease forwards; }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(180deg); } }
 
 * {
   box-sizing: border-box; }

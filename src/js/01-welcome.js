@@ -42,6 +42,8 @@ const showWelcomePage = () => {
 const randomizeAvatar = () => {
   const newAvatar = randomString();
   paintAvatar(newAvatar);
+  animateRotation();
+
 };
 
 // start series app
@@ -59,6 +61,13 @@ const fadeOut = () => {
   const temp = setTimeout(takeToWebsite, 3000);
 };
 
+// animate refresh button rotation
+const animateRotation = () => {
+  const refreshEl = document.querySelector('.js-refresh-avatar');
+  refreshEl.classList.add('animate');
+  setTimeout(() => refreshEl.classList.remove('animate'), 500);
+}
+
 /*************************
  *     listen events     *
  *************************/
@@ -75,6 +84,8 @@ const listenNameInput = () => {
 
 const listenRefreshAvatar = () => {
   const refreshEl = document.querySelector('.refresh-avatar');
+  const refreshTextEl = document.querySelector('.not-happy');
+  refreshTextEl.addEventListener('click', randomizeAvatar);
   refreshEl.addEventListener('click', randomizeAvatar);
 };
 

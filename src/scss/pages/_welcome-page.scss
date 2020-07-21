@@ -204,7 +204,7 @@
       color: rgba(255, 255, 255, 0.3);
 
       & ~ .refresh-avatar {
-        transform: rotate(360deg);
+        color: rgb(218, 42, 139);
       }
     }
   }
@@ -226,9 +226,25 @@
     transition: transform 5s ease;
     cursor: pointer;
     margin: 0 10px;
+    transition: color .7s ease;
 
     &:hover {
-      transform: rotate(360deg);
+      color: rgb(218, 42, 139);
     }
+
+    &.animate {
+      animation: rotate .5s ease forwards;
+    }
+  }
+}
+
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
   }
 }
